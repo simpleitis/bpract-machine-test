@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Machine Test Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Design the Tools Documents page(refer the screenshots).
+- Integrate The API
+- The Page should have proper pagination
 
-## Available Scripts
+## Required Fields in the Env
 
-In the project directory, you can run:
+1. REACT_APP_HOST_NAME = https://machine-test.cloudmlmdemo.com/
 
-### `npm start`
+## Tasks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### TASK - 1 Document CRUD
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow the screenshots and build out the pages using the following api
 
-### `npm test`
+<!-- - Get All: api/admin/tool-documents -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  1. Parameters:
+     - page - the required page number
 
-### `npm run build`
+- Add new document: /api/admin/tool-documents/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  1. Request Body
+     - sort_order: int
+     - title: string
+     - document_url: file
+     - \_method: PUT
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Get By Id: api/admin/tool-documents/<document_id>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Update Document: api/admin/tool-documents/<document_id>
 
-### `npm run eject`
+  1. Request Body
+     - sort_order: int
+     - title: string
+     - document_url: file
+     - \_method: PUT
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- - Delete: api/admin/tool-documents/<document_id> -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### TASK - 2 Settings Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Follow the screenshots and build out the pages using the following api
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Get: api/admin/brand-company-details
+- Update: api/admin/brand-company-details/<brand_id>
 
-## Learn More
+  1. Request Body
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     - email: valid email
+     - name: string
+     - address: string
+     - active: 1/0 (T/F)
+     - favicon_img: url
+     - logo_img: url
+     - side_bar_logo_img: url
+     - \_method: PUT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**The allotted time for the machine test is 2hr**
